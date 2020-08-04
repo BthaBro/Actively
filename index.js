@@ -19,7 +19,7 @@ Get more commands here - /help`
 })
 
 bot.command('random', (ctx) => {
-    axios.get('https://www.boredapi.com/api/activity')
+    return axios.get('https://www.boredapi.com/api/activity')
             .then(res => {
                 let data = res.data;
                 ctx.reply(data.activity);
